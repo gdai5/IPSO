@@ -1,10 +1,12 @@
 <?php
 //同値のユーザ名が入ってきたらどうするか？
 class IpsoController extends AppController{
+  //ヘルパーとしてhtml, form, javascriptを呼び出している
   public $helpers = array('Html', 'Form');
   public $theme = "Cakestrap";
   //使うモデルを宣言している
   var $uses = array('User','Question');
+  //var $helpers = array('Javascript');
 		
 	//indexアクション（認証が必要なページ）
   public function index(){
@@ -18,8 +20,7 @@ class IpsoController extends AppController{
                                                                                  'Question.difficult', 
                                                                                  'Question.testdata_num'))
                                                               ));
-    //$results = $this->Question->find('all');
-    //$this->set('questions',$results);
+    
     $this->set('title_for_layout', 'メイン画面');
   }
   
@@ -27,6 +28,5 @@ class IpsoController extends AppController{
     $this->Auth->logout();
   }
   
-
 }
 ?>
