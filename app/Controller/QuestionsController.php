@@ -36,6 +36,8 @@ class QuestionsController extends AppController{
    */
   public function auto_assessment($id = null) {
     $this->set('userinfo',$this->Auth->user());
+    $this->Question->id = $id;
+    $this->set('question', $this->Question->read());
     $program_code = $_POST['program_code'];
     $this->set('program_code',$program_code);
   }

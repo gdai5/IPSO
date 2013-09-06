@@ -1,9 +1,8 @@
 
-<h3 style="text-align:center">
-  <div id="header" class="container" style="background:gray;">
-    <?php echo $question['Question']['title']?>
-  </div>
-</h3>
+<!-- 選択した問題に対してのプログラムを書く画面 -->
+<div id="header" class="container">
+    <pre  style="border-width: 4px;"><h3 style="text-align:center"><?php echo $question['Question']['title']?></h3></pre>
+</div>
  
 <div class="container">
   <div class="row">

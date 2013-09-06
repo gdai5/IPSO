@@ -3,40 +3,53 @@
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-<style type="text/css">
-    body {
-      padding-top: 60px;
-      padding-bottom: 40px;
-    }
-    .sidebar-nav {
-      padding: 9px 0;
-    }
-</style>
-
-<!-- ▼上部ナビゲーションバー -->
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container-fluid">
-        
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-
-      <a class="brand" href="./bootstrap-sample.html">メニュー覧：</a>
-      <div class="nav-collapse">
-        <ul class="nav">
-          <li><a href="/ipso/my_page">マイページ</a></li>
-          <li class="active"><a href="/questions/all">問題選択</a></li>
-          <li><a href="/testdatas/make">テストデータ作成</a></li>
-          <li><a href="/ipso/logout">ログアウト</a></li>
-        </ul>
-        <p class="navbar-text pull-right"><a href="./Login.php">ヘルプ</a></p>
-      </div><!--/.nav-collapse -->
-
-    </div>
-  </div>
+<div id="header">
+  <pre  style="border-width: 4px;"><center><h3><?php echo $question['Question']['title'];?>の評価結果</h3></center></pre>
 </div>
 
-<textarea class="span4" rows="20"><?php echo $program_code;?></textarea>
+
+<div class="container">
+    <div class="row">
+      <div class="span5 offset1">
+        <h3 style="text-align:center">正誤判定</h3>
+        <textarea readonly class="span5" rows="15">
+          -----------------test1-----------------
+          Correct Output : 12
+          Your Output    : 12
+          Result         : Good
+        
+          -----------------test2-----------------
+          Correct Output : 94
+          Your Output    : 30
+          Result         : Faile
+          ・
+          ・
+          ・
+          ・
+        </textarea>
+      </div>
+      <!-- span5 offset1 end -->
+      
+      <div class="span6">
+        <h3>実行結果</h3>
+        <div class="row">
+          <div class="span3">
+            <h4>自動正誤判定結果</h4>
+            <h4>テストデータ数：<?php echo $question['Question']['testdata_num'];?></h4>
+            <h4>合っていた数　：1</h4>
+            <h4><strong>結果：Wrong Answer</strong></h4>
+          </div>
+          <div class="span3">
+            <h4>自動評価</h4>
+            <h4>ユーザの実力</h4>
+            <h4>Befor：3.4</h4>
+            <h4>After：3.2</h4>
+          </div>
+        </div>
+        <br><br>
+        <a href="/questions/all" class="btn btn-inverse btn-large">問題一覧へ戻る</a>
+      </div>
+      <!-- span6 end -->
+      
+    </div>
+</div>
