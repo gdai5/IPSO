@@ -31,6 +31,7 @@ App::uses('Controller', 'Controller');
  * @package       app.Controller
  * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
+ 
 class AppController extends Controller {
   
   public $components = array(
@@ -49,6 +50,19 @@ class AppController extends Controller {
     //認証不要のページの指定
     $this->Auth->allow('login', 'add'); 
     $this->Auth->authError = 'ログインする必要があります。';
+  }
+  
+  /**
+   * statusテーブルのresultには0~5まで数字で結果を表す
+   * そのため数字を入れたら結果文字列を返す配列を作成する
+   */
+  public function make_result_array() {
+    $result_num[0] = "Accepted";
+    $result_num[1] = "Wrong Answer";
+    $result_num[2] = "Runtime Error";
+    $result_num[3] = "Time Limit";
+    $result_num[4] = "Compile Error";
+    return $result_num;
   }
   
   

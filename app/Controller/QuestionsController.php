@@ -11,7 +11,6 @@ class QuestionsController extends AppController{
                                                                'fields' => array(
                                                                                  'Question.id', 
                                                                                  'Question.title', 
-                                                                                 'Question.text', 
                                                                                  'Question.difficult', 
                                                                                  'Question.testdata_num'))
                                                               ));
