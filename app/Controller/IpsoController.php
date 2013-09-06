@@ -12,7 +12,7 @@ class IpsoController extends AppController{
   public function index(){
     //アクセス情報をビューに渡す
     $this->set('userinfo',$this->Auth->user());
-    $this->set('questions', $this->Question->find('all', array(
+    $this->set('questions_info', $this->Question->find('all', array(
                                                                'fields' => array(
                                                                                  'Question.id', 
                                                                                  'Question.title', 
@@ -26,6 +26,21 @@ class IpsoController extends AppController{
   
   public function logout(){
     $this->Auth->logout();
+  }
+  
+  public function my_page() {
+      //アクセス情報をビューに渡す
+    $this->set('userinfo',$this->Auth->user());
+    $this->set('questions_info', $this->Question->find('all', array(
+                                                               'fields' => array(
+                                                                                 'Question.id', 
+                                                                                 'Question.title', 
+                                                                                 'Question.text', 
+                                                                                 'Question.difficult', 
+                                                                                 'Question.testdata_num'))
+                                                              ));
+    
+    $this->set('title_for_layout', 'マイページ');
   }
   
 }

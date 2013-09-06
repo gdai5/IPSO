@@ -20,7 +20,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
     <!-- jsファイルの読み込み準備 -->
     <?php echo $scripts_for_layout; ?>
@@ -39,6 +39,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	?>
 	<!-- JQueryの導入 -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	
 </head>
 <body>
 	<div id="container">
@@ -69,5 +70,6 @@ $(function() {
     }, 1000);
 });
 </script>
+
 </body>
 </html>

@@ -37,7 +37,7 @@ class AppController extends Controller {
     'Session',
     'Auth' => array(
       //ログイン後の行き先
-      'loginRedirect' => array('controller' => 'ipso', 'action' => 'index'),
+      'loginRedirect' => array('controller' => 'ipso', 'action' => 'my_page'),
       //ログアウト後の行き先
       'logoutRedirect' => array('controller' => 'users', 'action' => 'login')
     )

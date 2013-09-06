@@ -72,7 +72,7 @@
             <?php } ?>
             //id=textの内容を引数のtxtに変更する関数
             function ChangeQuestionInfo(num, txt) {
-                document.getElementById("text").innerHTML = txt;
+                document.getElementById("text").innerHTML = "<?php echo $heredocumens[1];?>;
                 document.getElementById("testdata_num").innerHTML = "テストデータ数：" + question_info[num][0];
                 document.getElementById("difficult").innerHTML = "難易度：" + question_info[num][1];
             }
