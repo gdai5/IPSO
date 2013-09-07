@@ -33,7 +33,7 @@
               <a class="dropdown-toggle" data-toggle="dropdown">問題<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li class="active"><a href="/questions/all">問題一覧</a></li>
-                <li><a href="/questions/all">他ユーザのコード閲覧</a></li>
+                <li><a href="/questions/code_perusal">他ユーザのコード閲覧</a></li>
               </ul>
             </li>
             <!-- pull down meny（問題） end-->

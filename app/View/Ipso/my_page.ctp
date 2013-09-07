@@ -32,7 +32,7 @@
               <a class="dropdown-toggle" data-toggle="dropdown">問題<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="/questions/all">問題一覧</a></li>
-                <li><a href="/questions/all">他ユーザのコード閲覧</a></li>
+                <li><a href="/questions/code_perusal">他ユーザのコード閲覧</a></li>
               </ul>
             </li>
             <!-- pull down meny（問題） end-->
@@ -59,7 +59,7 @@
 <div class="row-fluid">
   <!-- span4 -->
   <div class="span4">
-    <h3 style="text-align:center">ユーザ情報</h3>
+    <h3 style="text-align:center"><i class="icon-user"></i>ユーザ情報</h3>
     <table class="table table-bordered">
       <thead>
         <tr>
